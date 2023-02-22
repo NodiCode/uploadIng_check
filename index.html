@@ -20,22 +20,22 @@
         let btn =document.querySelector("#btn")
         let text=document.querySelector("h1")
 
-        // btn.onclick=()=>{
-        //     text.classList.toggle('color')
-        //     text.classList.toggle("red")
-        // }
-
-        box = false
         btn.onclick=()=>{
-            box =!box
-            if( box===true){
-                text.classList.remove("color")
-                text.classList.add("red")
-            }else{
-                text.classlist.remove("red")
-                text.classLIst.add("color")
-            }
+            text.classList.toggle('color')
+            text.classList.toggle("red")
         }
+
+        // box = false
+        // btn.onclick=()=>{
+        //     box =!box
+        //     if( box===true){
+        //         text.classList.remove("color")
+        //         text.classList.add("red")
+        //     }else{
+        //         text.classlist.remove("red")
+        //         text.classLIst.add("color")
+        //     }
+        // }
     </script>
 </body>
 </html>
