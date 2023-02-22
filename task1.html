@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 100px 200px;
+        }
+
+
+        #block {
+            position: relative;
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+        }
+        .disolve{
+            transition:3s;
+            opacity:0%;
+        }
+        .box {
+            background-color: red;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid #333;
+            transition: 3s;
+        }
+
+        .box1 {
+            background-color: red;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            animation: cycling 4s linear infinite 2s;
+        }
+
+        .box2 {
+            background-color: green;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            animation: cycling 4s linear infinite;
+        }
+
+
+
+        @keyframes cycling {
+
+            from,
+            to {
+                top: 0;
+                left: 0;
+            }
+
+            25% {
+                top: 400px;
+                left: 0px;
+
+            }
+
+            50% {
+                top: 400px;
+                left: 400px;
+            }
+
+            75% {
+                top: 0px;
+                left: 400px;
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Click</button>
+    <h1 class="appear disolve">Click to start</h1>
+    <div id="block">
+        <div class="box box1"></div>
+        <div  class="box box2"></div>
+    </div>
+    <script>
+        let btn = document.querySelector("#btn")
+        let box1 = document.querySelector(".box1")
+        let box2 = document.querySelector(".box2")
+        let text=document.querySelector("h1")
+        btn.onclick = () => {
+                box1.classList.toggle("box1")
+                box2.classList.toggle("box2")
+                text.classList.toggle("disolve")
+        }
+    </script>
+</body>
+
+</html>
